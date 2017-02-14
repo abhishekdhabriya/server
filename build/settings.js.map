@@ -1,0 +1,1 @@
+{"version":3,"sources":["settings.js"],"names":["isDevelopment","process","env","NODE_ENV"],"mappings":";;;;;AAAO,IAAMA,wCAAgBC,QAAQC,GAAR,CAAYC,QAAZ,KAAyB,YAA/C;;;;;;;;gCAAMH,a","file":"settings.js","sourcesContent":["export const isDevelopment = process.env.NODE_ENV !== 'production';"],"sourceRoot":"/Users/adhabriy/Development/projects/projects/Webpack-1/src/server"}

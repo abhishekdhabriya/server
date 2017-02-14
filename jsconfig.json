@@ -1,0 +1,5 @@
+{
+    "files" : [
+        "src/"  // we are saying that all our source code will be in this folder. so don't process code in any other folder.
+    ]
+}

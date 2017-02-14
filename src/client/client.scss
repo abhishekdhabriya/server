@@ -1,0 +1,13 @@
+$fa-font-path: "~font-awesome/fonts"; // we need to override the font-awesome path variable
+// this is due the the nature of sass loader how it resolve file name. 
+// look at _path.scss, so wae asking it to look into node modules folder for the files
+// ~ asking the sass compiler to look into the nod_modules folder
+@import '~font-awesome/scss/font-awesome';
+
+body {
+    background: #444;
+
+    h1 {
+        color: red;
+    }
+}
