@@ -1,1 +1,0 @@
-{"version":3,"sources":["settings.js"],"names":["isDevelopment","process","env","NODE_ENV"],"mappings":";;;;;AAAO,IAAMA,wCAAgBC,QAAQC,GAAR,CAAYC,QAAZ,KAAyB,YAA/C","file":"settings.js","sourcesContent":["export const isDevelopment = process.env.NODE_ENV !== 'production';"],"sourceRoot":"/Users/adhabriy/Development/projects/projects/server-1/src/server"}
