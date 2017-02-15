@@ -2,10 +2,14 @@ import express from 'express';
 import http from 'http'; // package from nodejs
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
-// import 
+import mongoose from 'mongoose';
 
-import { isDevelopment } from './settings';
 import routes from './routes';
+
+// --------------
+// DB setup
+
+mongoose.connect('mongodb://localhost:auth/auth');
 
 // --------------
 // setup 

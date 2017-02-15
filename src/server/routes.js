@@ -1,9 +1,5 @@
-export default function(app) {
-    app.get('/', (req, res)=> {
-        res.send(['hi', 'blessings']);
-    });
+import Authentication from './controllers/authentication';
 
-    app.get('/auth', (req, res)=> {
-        res.send('Inside auth route');
-    });
+export default function(app) {
+    app.post('/signup', Authentication.signup);
 }
