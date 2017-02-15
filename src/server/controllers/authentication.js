@@ -42,6 +42,14 @@ export default {
                 res.json({ token: tokenForUser(user)});
             });
         });
+    },
+
+    signin: (req, res) => {
+        // User is already authenticated with the middleware, so now we just need to provide them with the token
+        // passport will assign the user to req.user if the authentication was successful, 
+        // meaning we will have access to the user object 
+
+        res.send({token: tokenForUser(req.user)});
     }
 };
 
