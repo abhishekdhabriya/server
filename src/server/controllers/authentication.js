@@ -5,7 +5,7 @@ import User from '../models/users';
 
 function tokenForUser(user) {
     const timestamp = new Date().getTime();
-    return jwt.encode({sub:user.email, iat: timestamp}, secret); // encode user information using secret from config
+    return jwt.encode({sub:user.id, iat: timestamp}, secret); // encode user information using secret from config
     // sub stands for subject and iat stands for issue at time and both are standards
 }
 
