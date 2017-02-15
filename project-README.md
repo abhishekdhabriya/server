@@ -71,3 +71,23 @@ In terminal execute adhabriy$
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
 Press F5 to enable debug mode, make sure that the app is running the chrome browser and the developer tool is closed.
 
+create a file called launch.json under .vscode 
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Server:Attach",
+            "port": 5858,
+            "address": "localhost",
+            "restart": false,
+            "sourceMaps": true,
+            "localRoot": "${workspaceRoot}",
+            "outDir": "${workspaceRoot}/build" // this tells visual studio where it looks for the "sourceMaps"
+        }
+    ]
+}
