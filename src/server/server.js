@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import mongoose from 'mongoose';
 
 import routes from './routes';
+import passportService from './services/passport';
 
 // --------------
 // DB setup
@@ -17,6 +18,8 @@ const app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json({type: '*/*'}));
 const server = http.Server(app);
+passportService.LocalStrategy();
+passportService.JwtStrategy();
 routes(app);
 // ---------------
 // configuration

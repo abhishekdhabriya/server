@@ -1,7 +1,6 @@
 import Authentication from './controllers/authentication';
-import passportService from './services/passport';
 import passport from 'passport';
-
+import validation from './common/validation';
 // we are asking passport to use jwt as our authentication strategy and to not create a session, by default it creates a cokkie based session
 // this requireAuth can be used as middleware
 const requireAuth = passport.authenticate('jwt', {session:false});
@@ -14,6 +13,5 @@ export default function(app) {
         res.send({hi: 'there'});
     });
     app.post('/signup', Authentication.signup);
-
-    app.post('/signin', requireSignin, Authentication.signin);
+    app.post('/signin', validation.validateLogin, requireSignin, Authentication.signin);
 }
