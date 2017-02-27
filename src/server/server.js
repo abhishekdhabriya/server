@@ -3,7 +3,7 @@ import http from 'http'; // package from nodejs
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
-
+import cors from 'cors';
 import routes from './routes';
 import passportService from './services/passport';
 
@@ -15,6 +15,7 @@ mongoose.connect('mongodb://localhost:auth/auth');
 // --------------
 // setup 
 const app = express();
+app.use(cors());
 app.use(morgan('combined'));
 app.use(bodyParser.json({type: '*/*'}));
 const server = http.Server(app);

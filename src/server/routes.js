@@ -10,7 +10,7 @@ const requireSignin = passport.authenticate('local', {session: false});
 export default function(app) {
     // any request must pass with requireAuth middleware
     app.get('/', requireAuth, (req, res) => {
-        res.send({hi: 'there'});
+        res.send({message: 'Yes man! '});
     });
     app.post('/signup', Authentication.signup);
     app.post('/signin', validation.validateLogin, requireSignin, Authentication.signin);
